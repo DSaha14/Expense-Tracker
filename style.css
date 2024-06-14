@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root {
+    --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    --primary-color: #3498db;
+    --secondary-color: #e7e7e7;
+    --accent-color: #e74c3c;
+    --hover-color: #2980b9;
+    --income-background: #dff0d8;
+    --expense-background: #f2dede;
+    --section-background: #f9f9f9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: 'Lato', sans-serif;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h1, h2, h3, h4 {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.list li {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    border-left: 5px solid var(--primary-color);
+    margin-bottom: 10px;
+    padding: 10px;
+    list-style-type: none;
+    transition: transform 0.3s ease;
+}
+
+.list li.plus {
+    background-color: var(--income-background);
+}
+
+.list li.minus {
+    background-color: var(--expense-background);
+    border-left-color: var(--accent-color);
+}
+
+.list li:hover {
+    transform: scale(1.03);
+}
+
+.btn, .delete-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover, .delete-btn:hover {
+    background-color: var(--hover-color);
+}
+
+input[type="text"], input[type="number"] {
+    border: 1px solid var(--secondary-color);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: var(--primary-color);
+}
+
+.inc_exp-container, .form-control, .list {
+    background-color: var(--section-background);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+h4, label {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+}
